@@ -12,7 +12,7 @@ const AboutPage = ({ setPage }) => {
 
   const stats = [
     ["15,000+", "Trucks in Network"],
-    ["35 Yrs", "Industry Experience"],
+    ["35+ Yrs", "Industry Experience"],
     ["10,000+", "Happy Clients"],
     ["99.2%", "On-Time Delivery"],
   ];

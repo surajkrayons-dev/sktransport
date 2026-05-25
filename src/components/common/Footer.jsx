@@ -135,9 +135,22 @@ const Footer = ({ setPage }) => {
               500+ cities connected.
             </p>
             <div style={{ display: "flex", gap: 10 }}>
-              {["fb", "tw", "ig", "in"].map((s) => (
-                <div
-                  key={s}
+              {[
+                {
+                  icon: "f",
+                  link: "https://facebook.com/",
+                },
+
+                {
+                  icon: "📷",
+                  link: "https://instagram.com/",
+                },
+              ].map((item, i) => (
+                <a
+                  key={i}
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
                   style={{
                     width: 36,
                     height: 36,
@@ -146,20 +159,24 @@ const Footer = ({ setPage }) => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: 14,
+                    fontSize: 16,
                     cursor: "pointer",
                     transition: "all 0.2s",
                     border: "1px solid rgba(255,255,255,0.08)",
+                    color: "#fff",
+                    textDecoration: "none",
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = "var(--orange)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = "rgba(255,255,255,0.07)";
+                    e.currentTarget.style.transform = "translateY(0)";
                   }}
                 >
-                  {s === "fb"
-                    ? "f"
-                    : s === "tw"
-                      ? "𝕏"
-                      : s === "ig"
-                        ? "📷"
-                        : "in"}
-                </div>
+                  {item.icon}
+                </a>
               ))}
             </div>
           </div>
@@ -271,7 +288,11 @@ const Footer = ({ setPage }) => {
               ["📱", "WhatsApp", "+91 93192 20315"],
               ["📧", "Email", "sktransportservices75@gmail.com"],
               ["🕐", "Hours", "24/7 Available"],
-              ["📍", "Base", "101, DSIDC Shed Scheme 1, Near National Dharam Kanta, Okhla Phase II, New Delhi-110020"],
+              [
+                "📍",
+                "Base",
+                "101, DSIDC Shed Scheme 1, Near National Dharam Kanta, Okhla Phase II, New Delhi-110020",
+              ],
             ].map(([ico, label, val]) => (
               <div
                 key={label}
@@ -313,7 +334,8 @@ const Footer = ({ setPage }) => {
           }}
         >
           <span style={{ fontSize: 13 }}>
-            © {new Date().getFullYear()} SK Transport Services. All rights reserved.
+            © {new Date().getFullYear()} SK Transport Services. All rights
+            reserved.
           </span>
           <div style={{ display: "flex", gap: 24 }}>
             {["Privacy Policy", "Terms of Service", "GST: 07ALFPK6422N2ZT"].map(
