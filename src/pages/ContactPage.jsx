@@ -275,7 +275,7 @@ const ContactPage = () => {
                   "sktransportservices75@gmail.com",
                   "We reply within 2 hours",
                 ],
-                ["📍", "Head Office", "101, DSIDC Shed Scheme 1, Near National Dharam Kanta, Okhla Phase II, New Delhi 110020", "Pan-India operations"],
+                ["📍", "Head Office", "101, DSIDC Shed Scheme 1, Near National Dharam Kanta, Okhla Phase II, New Delhi-110020", "Pan-India operations"],
                 [
                   "🕐",
                   "Business Hours",

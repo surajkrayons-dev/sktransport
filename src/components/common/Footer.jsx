@@ -48,7 +48,7 @@ const Footer = ({ setPage }) => {
             </div>
           </div>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <a href="tel:+919876543210" className="btn-white">
+            <a href="tel:+919319220315" className="btn-white">
               📞 Call Now
             </a>
             <button
@@ -267,11 +267,11 @@ const Footer = ({ setPage }) => {
               Contact Us
             </h4>
             {[
-              ["📞", "Phone", "+91 98765 43210"],
-              ["📱", "WhatsApp", "+91 98765 43210"],
-              ["📧", "Email", "info@sktransport.in"],
+              ["📞", "Phone", "+91 93192 20315"],
+              ["📱", "WhatsApp", "+91 93192 20315"],
+              ["📧", "Email", "sktransportservices75@gmail.com"],
               ["🕐", "Hours", "24/7 Available"],
-              ["📍", "Base", "Delhi, India"],
+              ["📍", "Base", "101, DSIDC Shed Scheme 1, Near National Dharam Kanta, Okhla Phase II, New Delhi-110020"],
             ].map(([ico, label, val]) => (
               <div
                 key={label}
@@ -313,10 +313,10 @@ const Footer = ({ setPage }) => {
           }}
         >
           <span style={{ fontSize: 13 }}>
-            © 2025 SK Transport Services. All rights reserved.
+            © {new Date().getFullYear()} SK Transport Services. All rights reserved.
           </span>
           <div style={{ display: "flex", gap: 24 }}>
-            {["Privacy Policy", "Terms of Service", "GST: 07XXXXX1234X1Z5"].map(
+            {["Privacy Policy", "Terms of Service", "GST: 07ALFPK6422N2ZT"].map(
               (t) => (
                 <span key={t} style={{ fontSize: 12, cursor: "pointer" }}>
                   {t}
