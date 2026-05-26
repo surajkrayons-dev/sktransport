@@ -245,7 +245,7 @@ const ContactPage = () => {
               style={{
                 background: "var(--navy)",
                 borderRadius: 16,
-                padding: "36px 28px",
+                padding: "14px 16px",
                 marginBottom: 24,
               }}
             >
@@ -266,16 +266,38 @@ const ContactPage = () => {
                 [
                   "📞",
                   "Phone / WhatsApp",
-                  "+91 93192 20315",
+                  <a
+                    href="tel:+919319220315"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                    }}
+                  >
+                    +91 93192 20315
+                  </a>,
                   "Call or WhatsApp 24/7",
                 ],
                 [
                   "📧",
                   "Email",
-                  "sktransportservices75@gmail.com",
+                  <a
+                    href="mailto:sktransportservices75@gmail.com"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      wordBreak: "break-word",
+                    }}
+                  >
+                    sktransportservices75@gmail.com
+                  </a>,
                   "We reply within 2 hours",
                 ],
-                ["📍", "Head Office", "101, DSIDC Shed Scheme 1, Near National Dharam Kanta, Okhla Phase II, New Delhi-110020", "Pan-India operations"],
+                [
+                  "📍",
+                  "Head Office",
+                  "101, DSIDC Shed Scheme 1, Near National Dharam Kanta, Okhla Phase II, New Delhi-110020",
+                  "Pan-India operations",
+                ],
                 [
                   "🕐",
                   "Business Hours",

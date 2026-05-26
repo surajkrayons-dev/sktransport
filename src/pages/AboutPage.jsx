@@ -1,4 +1,5 @@
 const AboutPage = ({ setPage }) => {
+  const isSmallMobile = window.innerWidth <= 380;
   const whyUs = [
     ["🚛", "Truck Booking", "Quick booking for part-load and full-load transport across India — confirmed within the hour."],
     ["📦", "Safe Loading", "Goods handled carefully during loading, transit & unloading for complete cargo safety."],
@@ -36,7 +37,7 @@ const AboutPage = ({ setPage }) => {
       {/* ── HERO BANNER ── */}
       <div style={{
         background: "linear-gradient(125deg, #0d1b3e 0%, #162040 60%, #0d1b3e 100%)",
-        padding: "80px 5% 72px", position: "relative", overflow: "hidden",
+        padding: isSmallMobile ? "60px 16px" : "80px 5% 72px", position: "relative", overflow: "hidden",
       }}>
         {/* Grid bg */}
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
@@ -45,7 +46,7 @@ const AboutPage = ({ setPage }) => {
 
         <div style={{ maxWidth: 1280, margin: "0 auto", position: "relative" }}>
           <span style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: 12, color: "var(--orange)", letterSpacing: 3, textTransform: "uppercase", display: "block", marginBottom: 14 }}>Our Story</span>
-          <h1 style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: "clamp(40px,6vw,72px)", color: "#fff", textTransform: "uppercase", lineHeight: 1, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: isSmallMobile ? 34 : "clamp(40px,6vw,72px)", color: "#fff", textTransform: "uppercase", lineHeight: 1, marginBottom: 20 }}>
             About <span style={{ color: "var(--orange)" }}>SK Transport</span>
           </h1>
           <p style={{ color: "#8a9ab5", fontSize: 17, lineHeight: 1.75, maxWidth: 580 }}>
@@ -62,21 +63,21 @@ const AboutPage = ({ setPage }) => {
       </div>
 
       {/* ── STORY SECTION ── */}
-      <section style={{ padding: "80px 5%", background: "var(--cream)" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72, alignItems: "center" }} className="two-col">
+      <section style={{ padding: isSmallMobile ? "55px 16px" : "80px 5%", background: "var(--cream)" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: isSmallMobile ? 28 : 72, alignItems: "center" }} className="two-col">
           {/* Left text */}
           <div style={{ animation: "slideLeft 0.7s ease" }}>
             <span style={{ fontFamily:"'Rajdhani',sans-serif", fontWeight:700, fontSize:12, color:"var(--orange)", letterSpacing:3, textTransform:"uppercase", display:"block", marginBottom:12 }}>Who We Are</span>
-            <h2 style={{ fontFamily:"'Rajdhani',sans-serif", fontWeight:700, fontSize:"clamp(30px,4vw,48px)", color:"var(--navy)", textTransform:"uppercase", lineHeight:1.05, marginBottom:28 }}>
+            <h2 style={{ fontFamily:"'Rajdhani',sans-serif", fontWeight:700, fontSize: isSmallMobile ? 34 : "clamp(30px,4vw,48px)", color:"var(--navy)", textTransform:"uppercase", lineHeight:1.05, marginBottom:28 }}>
               Built for India's<br /><span style={{ color:"var(--orange)" }}>Logistics Challenge</span>
             </h2>
-            <p style={{ color:"var(--gray)", fontSize:16, lineHeight:1.85, marginBottom:18 }}>
+            <p style={{ color:"var(--gray)", fontSize:16, lineHeight:isSmallMobile ? 1.65 : 1.85, marginBottom:18 }}>
               SK Transport Services was founded in <strong style={{ color:"var(--navy)" }}>1990</strong> with a single mission — make truck booking simple and reliable for every business in India, from a small trader in Jaipur to a large manufacturer in Pune.
             </p>
-            <p style={{ color:"var(--gray)", fontSize:16, lineHeight:1.85, marginBottom:18 }}>
+            <p style={{ color:"var(--gray)", fontSize:16, lineHeight:isSmallMobile ? 1.65 : 1.85, marginBottom:18 }}>
               With <strong style={{ color:"var(--navy)" }}>15,000+ verified trucks</strong> across our network and operations in 500+ cities, we handle everything from tiny part loads to massive over-dimensional cargo every single day.
             </p>
-            <p style={{ color:"var(--gray)", fontSize:16, lineHeight:1.85 }}>
+            <p style={{ color:"var(--gray)", fontSize:16, lineHeight:isSmallMobile ? 1.65 : 1.85 }}>
               Every driver is background-verified. Every truck is GPS-tracked. Every shipment is insured. <strong style={{ color:"var(--orange)" }}>That's the SK Promise.</strong>
             </p>
             <button className="btn-orange" onClick={() => { setPage("contact"); window.scrollTo(0,0); }} style={{ marginTop: 36 }}>
@@ -85,12 +86,12 @@ const AboutPage = ({ setPage }) => {
           </div>
 
           {/* Right — Stats grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, animation: "slideRight 0.7s ease" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: isSmallMobile ? 14 : 20, animation: "slideRight 0.7s ease" }}>
             {stats.map(([n, l], i) => (
               <div key={i} style={{
                 background: i % 2 === 0 ? "var(--navy)" : "#fff",
                 border: i % 2 === 0 ? "none" : "1px solid var(--light-gray)",
-                borderRadius: 16, padding: "32px 24px", textAlign: "center",
+                borderRadius: 16, padding: isSmallMobile ? "24px 16px" : "32px 24px", textAlign: "center",
                 animation: `scaleIn 0.5s ease ${i * 0.1}s both`,
                 boxShadow: i % 2 !== 0 ? "0 4px 20px rgba(0,0,0,0.05)" : "none",
               }}>

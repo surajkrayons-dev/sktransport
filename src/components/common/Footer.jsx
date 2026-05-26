@@ -284,9 +284,48 @@ const Footer = ({ setPage }) => {
               Contact Us
             </h4>
             {[
-              ["📞", "Phone", "+91 93192 20315"],
-              ["📱", "WhatsApp", "+91 93192 20315"],
-              ["📧", "Email", "sktransportservices75@gmail.com"],
+              [
+                "📞",
+                "Phone",
+                <a
+                  href="tel:+919319220315"
+                  style={{
+                    color: "inherit",
+                    textDecoration: "none",
+                  }}
+                >
+                  +91 93192 20315
+                </a>,
+              ],
+              [
+                "📱",
+                "WhatsApp",
+                <a
+                  href="https://wa.me/919319220315"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "inherit",
+                    textDecoration: "none",
+                  }}
+                >
+                  +91 93192 20315
+                </a>,
+              ],
+              [
+                "📧",
+                "Email",
+                <a
+                  href="mailto:sktransportservices75@gmail.com"
+                  style={{
+                    color: "inherit",
+                    textDecoration: "none",
+                    wordBreak: "break-word",
+                  }}
+                >
+                  sktransportservices75@gmail.com
+                </a>,
+              ],
               ["🕐", "Hours", "24/7 Available"],
               [
                 "📍",

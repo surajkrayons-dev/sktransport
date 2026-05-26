@@ -44,28 +44,58 @@ const Header = ({ page, setPage }) => {
         <div
           style={{
             background: "rgba(0,0,0,0.25)",
-            padding: "5px 5%",
+            padding: window.innerWidth <= 480 ? "8px 16px" : "5px 5%",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            gap: 10,
+            flexWrap: "wrap",
           }}
         >
-          <div style={{ display: "flex", gap: 24 }}>
-            {["📞 +91 93192 20315", "📧 sktransportservices75@gmail.com"].map((t) => (
-              <span
-                key={t}
+          <div
+            style={{
+              display: "flex",
+              gap: window.innerWidth <= 480 ? 10 : 24,
+              flexWrap: "wrap",
+              alignItems: "center",
+            }}
+          >
+            {[
+              {
+                label: "📞 +91 93192 20315",
+                href: "tel:+919319220315",
+              },
+              {
+                label: "📧 sktransportservices75@gmail.com",
+                href: "mailto:sktransportservices75@gmail.com",
+              },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
                 style={{
-                  fontSize: 12,
+                  fontSize: window.innerWidth <= 480 ? 11 : 12,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 4,
                   color: "rgba(255,255,255,0.65)",
                   fontFamily: "'Exo 2',sans-serif",
                   letterSpacing: 0.5,
+                  textDecoration: "none",
                 }}
               >
-                {t}
-              </span>
+                {item.label}
+              </a>
             ))}
           </div>
-          <div style={{ display: "flex", gap: 16 }}>
+          <div
+            style={{
+              display: "flex",
+              gap: 10,
+              width: window.innerWidth <= 480 ? "100%" : "auto",
+              justifyContent: window.innerWidth <= 480 ? "center" : "flex-end",
+            }}
+          >
             {["24/7 Support"].map((t) => (
               <span
                 key={t}
