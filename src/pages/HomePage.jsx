@@ -421,11 +421,11 @@ const HomePage = ({ setPage }) => {
               <text x="155" y="86" fill="#f97316" fontSize="18" fontWeight="700" fontFamily="monospace" textAnchor="middle" letterSpacing="2">SK TRANSPORT SERVICES</text>
             </svg>
           </div>
-          <div style={{ height: 10, background: "#1a2744", borderRadius: 5, position: "relative", overflow: "hidden" }}>
+          <div style={{ height: 5, background: "#1a2744", borderRadius: 5, position: "relative", overflow: "hidden" }}>
             <div style={{
               position: "absolute", inset: 0,
-              background: "repeating-linear-gradient(90deg,#f97316 0,#f97316 24px,transparent 24px,transparent 48px)",
-              animation: "roadScroll 0.9s linear infinite",
+              background: "repeating-linear-gradient(90deg,#f97316 0,#f97316 1px,transparent 30px,transparent 40px)",
+              animation: "roadScroll 0.4s linear infinite",
             }} />
           </div>
         </div>
